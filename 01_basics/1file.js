@@ -1,1 +1,1 @@
-console.log("HII")
+console.log("1st Code")
