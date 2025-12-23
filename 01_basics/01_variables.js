@@ -10,7 +10,7 @@ accountEmail = "par.com"                  // Values can be changed except for co
 accountPass = "1234"
 accountCity = "Mansa"
 
-let accountNo ;                          // only defining
+let accountNo ;                          // only defining , print undefined
 
 console.log("After changing the values : ")
 console.table([accountId,accountEmail,accountPass,accountCity,accountNo])

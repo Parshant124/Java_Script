@@ -3,7 +3,7 @@ console.log(2>1);   // true
 console.log("5"<6); // true
 // automatically converts the string to number
 
-console.log("5a"<6); //false
+console.log("5a"<6); //false , it considers string and number differntly i.e. no conversion here
 
 console.log(null > 0); // false
 console.log(null==0);  // false
