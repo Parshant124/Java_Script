@@ -1,6 +1,6 @@
 // Memory is of two type : Stack and Heap
 
-// Stack used for primitive data type , copy values
+// Stack used for primitive data type and function call frames , copy values
 // Heap used for non-primitive data type , take reference of the value
 
 // Stack memory
