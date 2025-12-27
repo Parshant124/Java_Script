@@ -1,0 +1,68 @@
+// const one = {
+//     username: "Parshant",
+
+//     two : function (){
+//         console.log(this)                           // will give the scope object of this
+//         return `${this.username} welcome`           // this refers to the existing context, i.e. scope of the object
+        
+//     },
+// }
+
+// console.log(one.two())
+// // console.log(this)
+// one.username = "Thor"
+// console.log(one.two())
+
+
+// Arrow Function
+
+// function addTwo(num1, num2){
+//     return num1+num2
+// }
+
+/*
+Key features
+
+✅ Hoisted completely (can be called before definition)
+Has its own this
+Has arguments object
+Safest, most traditional form
+
+Use when: you want reliability and clarity.
+
+*/
+
+// addTwo = function(num1, num2){
+//     return num1+num2
+// }
+
+/*
+
+Key features
+
+❌ Not hoisted like declarations
+this depends on how it’s called
+Has arguments
+Can be reassigned
+
+Use when: you want more control over when it exists.
+
+*/
+
+
+// addTwo = (num1, num2) => {
+//     return num1+num2
+// }
+
+/*
+
+
+
+*/
+
+// addTwo = (num1, num2) => (num1+num2)                    // It supports implicit return call
+addTwo = (num1, num2) => num1+num2
+
+// All these are the same references for the addTwo function
+
+console.log(addTwo(4,5))
