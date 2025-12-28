@@ -1,3 +1,9 @@
+// if-else
+// switch-case
+// ?? operator
+// ?: Ternary
+// Falsy, truthy values
+
 // simple if else hi hai, and same type for switch case
 
 // falsy values
