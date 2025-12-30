@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Test site
+        </title>
+    </head>
+    <body>
+        <h1 class="heading">
+            Random head
+        </h1>
+    <ul class="languages">
+        <li>JavaScript</li>
+        <li>Java</li>
+    </ul>
+    </body>
+    <script>
+        // here we are directly adding text to li
+        function addLang(new_lang){
+            const li = document.createElement('li');
+            li.innerHTML = `${new_lang}`;
+            // document.getElementsByClassName('languages')[0].appendChild(li);         // [0] written as it returns a HTML collection
+            document.querySelector('.languages').appendChild(li);                       // . represents class , # represents id
+        }
+
+        addLang("Python")
+        addLang("C")
+        addLang("C++")
+
+        // here at first we create a text node and then add this text node to the new node
+        function Optimized_add(new_lang){
+            const li = document.createElement('li');
+            const new_text = document.createTextNode(`${new_lang}`)
+            li.appendChild(new_text);
+            document.querySelector('.languages').appendChild(li);    
+        }
+
+        Optimized_add("HTML")
+
+        // Edit 
+        const secondLang = document.querySelector("li:nth-child(2)")  // selecting the child, here whole <li>Java</li> is selected
+        // 1st approach, jo optimized nhi h
+        secondLang.innerHTML = "changed"                              // changing the inner HTML of selected child, in this we have to traverse all the tree to find that node
+        // optimized wali
+        const newAdd = document.createElement('li')                   // creating an new <li> element
+        newAdd.innerText = "Changed via optimized way"                // in new element adding the text
+        // newAdd.innerHTML = "Changed via optimized way"           // these all do the same work here, but for complex textContent is preffered
+        // newAdd.textContent = "Changed via optimized way" 
+        secondLang.replaceWith(newAdd)                                // replacing the new element with previous one
+
+
+        // Practice kii thi:- Firse krna
+        const practiceChange = document.querySelector("li:nth-child(1)")   //  li:first-child
+        // practiceChange.outerHTML = <li>JavaScript22</li>
+        const newNode = document.createElement('li')
+        newNode.textContent = "JavaScript22"
+        practiceChange.replaceWith(newNode)
+
+
+        // Remove
+        const lastLang = document.querySelector("li:last-child")
+        lastLang.remove()
+    </script>
+</html>
