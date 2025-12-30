@@ -57,3 +57,4 @@ coding.forEach( (item) => {
     console.log(item.exe)
 })
 
+// for each do not return values, we use filter for that
