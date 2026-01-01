@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        Practice kri thi
+    </title>
+</head>    
+<body>
+    <h1 class="heading">
+        Just a Heading
+    </h1>
+    <ul class="devices">
+        <h2>Accessories/Devices</h2>
+        <li>Mobile</li>
+        <li>Laptop</li>
+    </ul>
+</body>
+<script>
+    function addDevices(device){
+        const li = document.createElement('li')
+        const addDev = document.createTextNode(`${device}`)
+        li.appendChild(addDev)
+        document.querySelector(".devices").appendChild(li)
+    }
+    addDevices("Computer")
+    addDevices("Mouse")
+
+    const lastChild = document.querySelector("li:last-child")
+    const node = document.createElement('li')
+    const textNode = document.createTextNode("Ear Buds")
+    node.appendChild(textNode)
+    lastChild.replaceWith(node)
+    
+    const remChild = document.querySelector("li:nth-child(2)")
+    remChild.remove()
+</script>
+
+</html>
