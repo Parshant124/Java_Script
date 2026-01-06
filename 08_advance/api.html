@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class = "page">
+        <button id="change">View info</button> 
+    </div>
+    <script>
+    const viewInfoButton = document.getElementById('change');
+    const page = document.querySelector('.page')
+    const myURL = 'https://api.github.com/users/Parshant124';
+
+    const xhr = new XMLHttpRequest();
+
+    xhr.open('GET', myURL);   
+
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            const data = JSON.parse(xhr.responseText)
+            viewInfoButton.addEventListener('click',function(e){
+                let p = document.createElement('p')
+                p.innerText = `Name : ${data["name"]}`
+                page.appendChild(p)
+
+                let img = document.createElement('img')
+                img.src = data["avatar_url"]
+                page.appendChild(img)
+            })
+            console.log(xhr.responseText); // ✅ WORKS HERE
+        } else {
+            console.log('Request failed');
+        }
+    };
+
+    xhr.send();
+</script>
+
+  </body>
+</html>
