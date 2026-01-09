@@ -10,10 +10,10 @@ const otherId = Symbol("123")
 const anotherId = Symbol("12345")
 
 // Symbol
-// console.log(id)
-// console.log(otherId)
+// console.log(id)             // Symbol(123)
+// console.log(otherId)        // Symbol(123)
 // console.log(id == otherId)  // Yet having the same value they are not equal.
-// console.log(anotherId)
+// console.log(anotherId)      // Symbol(12345)
 
 //BigInt
 const number = 1234567893432456n  // write n at end to convert it into BigInt
@@ -45,7 +45,7 @@ const myFunc = function(){         // Function declaration
 // myFunc() ;  // calling of function
 console.log(typeof myFunc)      // function or function object both are same
 
-let sum = function(a,b){
+let sum = function(a,b){        // function sum(a,b){}
     console.log("It is a Sum Function")
     return a+b
 }
