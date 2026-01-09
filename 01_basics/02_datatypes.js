@@ -3,7 +3,7 @@
 // alert("Any Message") // Use to give the alert window on the browser,(syntax for browser not for node js,uske liye alg syntax h)
 
 // ECMAstandards (ye js ke code format ke standard set krta h , read if you are going to build a website not recommended for casual learning)
-// MDM also do the same
+// MDN also do the same
 
 // Data_Types
 
